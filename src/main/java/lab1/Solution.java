@@ -7,11 +7,11 @@ import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) {
-//        question1();
-//        question2();
-//        question3();
-//        question4();
-//        question5();
+        question1();
+        question2();
+        question3();
+        question4();
+        question5();
         question6();
     }
 
@@ -84,20 +84,14 @@ public class Solution {
 //    Write a program to check remote system is reachable or not.
     private static void question5() {
         String ipAddress = "8.8.8.8";
-
         try {
-
             InetAddress add = InetAddress.getByName(ipAddress);
             if(add.isReachable(500))
                 System.out.println(ipAddress +" is reachable!");
             else
                 System.out.println(ipAddress +" is not reachable!");
-
-        }catch(UnknownHostException e) {
+        }catch(IOException e) {
             System.out.println("Error : "+ e.getMessage());
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
         }
     }
 
